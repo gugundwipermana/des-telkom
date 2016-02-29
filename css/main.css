@@ -1,0 +1,741 @@
+/* =========================================================================================================================== */
+
+/*
+|-----------------------------------------------------------------------------------
+| Costum Bootstrap
+|-----------------------------------------------------------------------------------
+|
+| Di bawah ini merupakan script yang digunakan untuk 
+| merubah beberapa pengaturan default component 
+| pada bootstrap
+|
+*/
+
+/**
+ *
+ * Costum navbar
+ *
+ */
+
+.navbar-nav {
+    width: 100%;
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+  .navbar-nav li {
+      float: none;
+      display: inline-block;
+  }
+}
+
+/**
+ *
+ *  navbar active
+ *  Untuk memberi menu yang active memiliki warna sendiri
+ *
+ */
+
+    .navbar-default .navbar-nav > .active > a,
+    .navbar-default .navbar-nav > .active > a:hover,
+    .navbar-default .navbar-nav > .active > a:focus, 
+    .m-active,
+    .navbar-nav .li-nav a.active,
+    .navbar-default .navbar-nav > li > a:hover, 
+    .navbar-default .navbar-nav > li > a:focus {
+      color: #ef434d;
+      background-color: rgba(0,0,0,0);
+      /*border-bottom: 3px solid #ef434d;*/
+      /*font-weight: bold;*/
+    }
+
+
+/* =========================================================================================================================== */
+
+/*
+|--------------------------------------------------------------------------------
+| ALL SETTINGS
+|--------------------------------------------------------------------------------
+|
+| Dibawah merupakan script untuk pengaturan secara 
+| keseluruhan
+|
+*/
+
+
+/**
+ *
+ *  UKURAN CONPONENT
+ *
+ */
+
+h1, h2, h3, h4, h5, h6 {
+    display: block;
+    margin-left: 0;
+    margin-right: 0;
+    font-weight: bold;
+}
+
+h1 { 
+    font-size: 2em;
+    margin-top: 0.67em;
+    margin-bottom: 0.67em;
+}
+
+h2 {
+    font-size: 1.5em;
+    margin-top: 0.83em;
+    margin-bottom: 0.83em;
+}
+
+h3 { 
+    font-size: 1.17em;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+h4 { 
+    margin-top: 1.33em;
+    margin-bottom: 1.33em;
+}
+
+h5 { 
+    font-size: .83em;
+    margin-top: 1.67em;
+    margin-bottom: 1.67em;
+}
+
+h6 { 
+    font-size: .67em;
+    margin-top: 2.33em;
+    margin-bottom: 2.33em;
+}
+
+/**
+ *
+ *  DINAMIS / DAPAT BERUBAH UKURAN SESUAI UKURAN LAYAR
+ *
+ */
+
+.h1-dinamis {
+    font-size: 4vmax;
+    line-height: 50%;
+}
+
+.h2-dinamis {
+    font-size: 2.5vmax;
+    margin: 1vmax;
+}
+
+.h3-dinamis {
+    font-size: 2vmax;
+    margin: 1vmax;
+}
+
+.h4-dinamis {
+    font-size: 1.5vmax;
+}
+
+.h5-dinamis {
+    font-size: 1.5vmax;
+}
+
+.h6-dinamis {
+    font-size: 1vmax;
+}
+
+
+p, li, a, td {
+    font-size: 13px;
+
+}
+
+    @media (min-width: 1600px) {
+        p, li, a, td {
+            font-size: 1vmax;
+        }
+    }
+
+a, a:hover, a:active, a:focus {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+
+.font-normal {
+    font-weight: normal;
+}
+.font-bold {
+    font-weight: bold;
+}
+
+.font-merah {
+    color: #ef434d;
+}
+
+
+.spasinull {
+    margin: 0px;
+    padding: 0px;
+}
+
+.line-200 {
+    line-height: 200%;
+}
+
+
+.btn-border-white {
+      padding: 5px 10px;
+      border: 1px solid white;
+      border-radius: 0;
+}
+      a.btn-border-white {
+            color: white;
+
+      }
+
+.btn-border-black {
+      padding: 5px 10px;
+      border: 1px solid #999;
+      border-radius: 0;
+}
+      a.btn-border-black {
+            color: #999;
+
+      }
+
+
+.menu-right {
+      position: fixed; 
+      top:15px; 
+      right: 5%; 
+      z-index: 1031;
+}
+
+      .menu-right a {
+              margin: 0 10px;
+              color:#999; 
+              font-weight:bold;
+      }
+
+.box-search {
+      position: absolute; 
+      top:60px; 
+      right: 5%; 
+      width: 210px;
+}
+
+      .box-search input[type=text] , .box-search input[type=submit]  {
+              border-radius: 0px;
+              border-color: white;
+              background-color: white;
+
+              -webkit-box-shadow: 3px 4px 23px -2px rgba(0,0,0,0.47);
+              -moz-box-shadow: 3px 4px 23px -2px rgba(0,0,0,0.47);
+              box-shadow: 3px 4px 23px -2px rgba(0,0,0,0.47);
+        }
+
+        .box-search input[type=submit] {
+              border-color: #ef434d;
+              background-color: #ef434d;
+              color: white;
+              font-weight: bold;
+        }
+
+/**
+ *
+ *  Indicator Page
+ *  Untuk memberi style pada tombol paging sebelah kanan
+ *
+ */
+
+ .onepage-pagination li a{
+ /* padding: 10px;*/
+  width: 15px;
+  height: 40px;
+  display: block;
+}
+
+.onepage-pagination li a:before{
+  content: '';
+  position: absolute;
+  width: 15px;
+  height: 40px;
+  /*background: rgba(0,0,0,0.85);*/
+  background-image: url(../img/indicator-right.png);
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+}
+
+        .onepage-pagination li:nth-last-child(8) a:before {
+                display: none;
+        }
+
+        .onepage-pagination li:nth-last-child(7) a:before {
+                background-image: url(../img/indicator-right-first.png);
+        }
+        
+        .onepage-pagination li:nth-last-child(1) a:before {
+                /*height: 20px;*/
+                background-image: url(../img/indicator-right-last.png);
+        }
+
+/*
+.onepage-pagination li a.active:before{
+  width: 10px;
+  height: 10px;
+  background: none;
+  border: 1px solid black;
+  margin-top: -4px;
+  left: 8px;
+}*/
+
+.onepage-pagination li a.active:before {
+        background-image: url(../img/indicator-right-active.png);
+}
+        .onepage-pagination li:nth-last-child(7) a.active:before {
+                background-image: url(../img/indicator-right-first-active.png);
+        }
+        
+        .onepage-pagination li:nth-last-child(1) a.active:before {
+                background-image: url(../img/indicator-right-last-active.png);
+        }
+
+
+/**
+ *
+ *  OVERLAY
+ *  memberikan effect gelap pada halaman yang memiliki background gambar
+ *
+ */
+
+.overlay {
+    position: relative; 
+    top: 0px; 
+    width: 100%; 
+    height: 100%; 
+    background: rgba(0,0,0, .3); 
+}
+
+/* =========================================================================================================================== */
+
+/*
+|--------------------------------------------------------------------------------
+| PAGE SETTINGS
+|--------------------------------------------------------------------------------
+|
+| Dibawah merupakan script untuk pengaturan  
+| perhalaman
+|
+*/
+
+.landing, .buildings, .locations, .floorplan, .facilities, .news, .galleries, .contact {
+    width:100%;
+    height: 100%;
+
+    background-color: #666;
+}
+
+      .box-middle-vertical {
+            position: relative;
+            top: 45%;
+            -ms-transform: translateY(-50%);
+            -webkit-transform: translateY(-50%);
+            transform: translateY(-50%); 
+      }
+
+/**
+ *
+ *  LANDING PAGE
+ *
+ */
+
+.landing {
+    /*background-image: url(../img/landing.jpg);*/
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+
+    background-position: center;
+
+    text-align: center; 
+    color: white;
+}
+      .box-scroll-down {
+            position: absolute;
+            bottom: 20%;
+            left:0; 
+            right:0;
+      }
+
+.landing  {
+    height: 100%;
+}
+
+.landing .carousel,
+.landing .item,
+.landing .active {
+    height: 100%;
+}
+
+.landing .carousel-inner {
+    height: 100%;
+}
+
+.landing .fill {
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
+
+
+/**
+ *
+ *  BUILDING PAGE
+ *
+ */
+
+.buildings {
+    background-color: #ef434d;
+    padding-top: 50px;
+    text-align: center; 
+    color: white;
+}
+       .buildings .container {
+              width: 90%;
+        }
+
+      @media (min-width: 768px) {
+              .buildings .container {
+                    width: 50%;
+              }
+      }
+
+      .buildings .line {
+            width:70px; 
+            height:3px; 
+            background-color: white; 
+            margin: 20px auto;
+      }
+
+/**
+ *
+ *  LOCATION PAGE
+ *
+ */
+ .locations {
+      color: white;
+ }
+
+      .locations .line {
+            width:50px; 
+            height:3px; 
+            background-color: #ef434d; 
+            margin: 10px 0;
+      }
+
+      #googleMap {
+            min-height:40vh;
+      }
+      
+
+      .locations .container {
+            min-height:60vh; 
+            padding: 0 10% 0 10%;
+            width: 100%;
+      }
+
+      .locations .box {
+            position: relative;
+            margin-top: 5%;
+      }
+
+      @media (min-width: 768px) {
+
+          .locations .line {
+              margin: 20px 0;
+          }
+
+          #googleMap {
+                min-height:100vh;
+          }
+
+          .locations .container {
+                min-height:100vh; 
+                padding: 0 20% 0 10%;
+          }
+
+          .locations .box {
+                margin-top: 45%;
+          }
+
+          .locations .box p {
+                 line-height: 200%;
+          }
+      }
+
+/**
+ *
+ *  FLOORPLAN PAGE
+ *
+ */
+
+.floorplan {
+    background-color: #645b54;
+}
+
+      .floorplan .line {
+            width:50px; 
+            height:3px; 
+            background-color: #ef434d; 
+            margin: 10px 0;
+      }
+
+      .floorplan .container {
+            /*min-height:60vh; */
+            padding: 50px 10% 0 10%;
+            width: 100%;
+      }
+
+      .floorplan .box {
+            position: relative;
+            margin-top: 5%;
+      }
+
+       .floorplan .box-image {
+             padding-left: 10%; 
+      }
+
+      .floorplan #images {
+              max-height:50vh; 
+              max-width: 100%;
+              width:auto;
+        }
+
+        .maparea-isi .line {
+                width:30px; 
+                height:2px; 
+                background-color: #ef434d; 
+                margin: 2px 0 8px 0;
+        }
+
+        .maparea-isi p {
+              font-size: 11px;
+        }
+
+      @media (min-width: 768px) {
+
+          .floorplan .line {
+              margin: 20px 0;
+          }
+
+          .floorplan .container {
+                min-height:100vh; 
+                padding: 0 20% 0 20%;
+          }
+
+          .floorplan .box {
+                margin-top: 45%;
+          }
+
+          .floorplan .box p {
+                 /*line-height: 200%;*/
+          }
+
+          .floorplan .box-image {
+                 padding-left: 0%; 
+                 margin-top: 100px; 
+                  height: 85vh;
+          }
+
+            .floorplan #images {
+                  max-height:100%; 
+                  width:auto;
+            }
+      }
+
+
+
+/**
+ *
+ *  FACILITIES PAGE
+ *
+ */
+.facilities {
+      margin-top: 50px;
+}
+ .facilities .item {
+        height:10%; 
+        width: 100%; 
+        overflow: hidden; 
+
+        background-position: center;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        background-size: cover;
+        -o-background-size: cover;
+
+        float:left;
+        cursor: pointer;
+ }
+
+        .facilities .item:hover .overlay {
+                background-color: rgba(0,0,0, .7);
+        }
+
+        .facilities .item .caption h2 {
+                position: absolute;
+                bottom: 10%;
+                left: 10%;
+                margin-left: 13px;
+
+                color: white;
+
+                transform: rotate(0deg);
+                transform-origin: left bottom  0;
+                width: 100vh;
+        }
+
+
+@media screen and (orientation: landscape) {
+        .facilities {
+              margin-top: 0px;
+        }
+
+        .facilities .item {
+              height:100%; 
+              width: 11.1%; 
+        }
+
+        .facilities .item .caption h2 {
+              transform: rotate(270deg);
+              left: 50%;
+        }
+}
+
+
+
+/**
+ *
+ *  NEWS PAGE
+ *
+ */
+
+
+
+
+
+
+
+
+
+
+/**
+ *
+ *  GALLERY PAGE
+ *
+ */
+
+.galleries  {
+    height: 100%;
+}
+
+.galleries .carousel,
+.galleries .item,
+.galleries .active {
+    height: 100%;
+}
+
+.galleries .carousel-inner {
+    height: 100%;
+}
+
+/* Background images are set within the HTML using inline CSS, not here */
+
+.galleries .fill {
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
+
+
+
+
+/**
+ *
+ *  CONTACT PAGE
+ *
+ */
+
+ .contact {
+        background-color: #ccc;
+ }
+
+      .contact .container {
+            padding: 0 10% 0 20%;
+            width: 100%;
+      }
+
+      .contact .line {
+            width:50px; 
+            height:3px; 
+            background-color: #ef434d; 
+            margin: 10px 0;
+      }
+
+      .contact .box {
+            position: relative;
+            margin-top: 5%;
+      }
+
+      @media (min-width: 768px) {
+
+          .contact .line {
+              margin: 20px 0;
+          }
+
+          .contact .container {
+          }
+
+          .contact .box {
+                margin-top: 30%;
+          }
+
+          .contact .box p {
+                 line-height: 200%;
+          }
+      }
+
+#table-message td {
+      padding: 5px 10px 5px 0;
+}
+
+#table-message  input[type=text], #table-message input[type=email], #table-message textarea {
+      background-color: rgba(0,0,0,0);
+      border-radius: 0;
+      border: 0;
+      border-bottom: 1px solid #999;
+
+      -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .0);
+      -o-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .0);
+      -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .0);
+      box-shadow: inset 0 1px 1px rgba(0, 0, 0, .0);
+
+      padding: 0;
+}
