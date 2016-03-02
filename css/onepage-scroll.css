@@ -29,7 +29,7 @@ body, .onepage-wrapper, html {
 
 .onepage-pagination {
   position: absolute;
-  right: 50px;
+  right: 20px;
   top: 40%;
   z-index: 5;
   list-style: none;
@@ -38,6 +38,14 @@ body, .onepage-wrapper, html {
 
   margin-top: -100px;
 }
+
+@media (min-width: 768px) {
+      .onepage-pagination {
+          right: 50px;
+      }
+  }
+
+
 .onepage-pagination li {
   padding: 0;
   text-align: center;

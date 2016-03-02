@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="plugins/slick/slick.css">
 
     <link rel="stylesheet" href="css/main.css">
+
 </head>
 <body style="height:100%;">
 
@@ -169,7 +170,26 @@
                      </div>
             </section>
             <section class="page locations">
-                    <div class="row">
+
+                      <div class="atas">
+                          <div id="googleMap"></div>
+                      </div>
+                      <div class="bawah">
+                            <div class="container" style="">
+                                    <div class="box">
+                                            <p style="color: #ef434d;">LOCATION</p>
+                                            <h3 class="h3-dinamis spasinull">Strategically Positioned <br/>on Jl. Jend. Gatot Subroto</h3>
+
+                                            <div class="line"></div>
+                                            <p>PRIME CBD LOCATION WITH MULTIPLE ACCESS TO IMPORTANT BUSINESS AREAS</p>
+                                            <p>
+                                                    Each floor gives slightly different experience due to the dynamics twisting building design. Tenants enjoy a choice of multiple zones and layout configurations thanks to the flexible and efficient column-free floor plan. Columns are located in the building perimeter, leaving the center open. 
+                                            </p>
+                                    </div>
+                            </div>
+                      </div>
+
+                    <!-- <div class="row">
                       <div class="col-sm-6 spasinull">
                           <div id="googleMap"></div>
                       </div>
@@ -187,7 +207,7 @@
                                     </div>
                             </div>
                       </div>
-                    </div>
+                    </div> -->
             </section>
             <section class="page floorplan" style="color: white;">
                     <div class="row ">
@@ -220,28 +240,28 @@
                                     <h3>Am int ressequi voluptae iducit odit officat.</h3>
                                     <div class="line"></div>
                                     <a href="floor-detail.html" class="btn-border-white">READ MORE</a>
-                                    <a onclick="closeAlert()">&#10006;</a>
+                                    <!-- <a onclick="closeAlert()">&#10006;</a> -->
                                 </div>
                                  <div class="maparea-isi right" id="dua-isi">
                                     <img src="img/floorplan.png" height="100">
                                     <h3>Am int ressequi voluptae iducit odit odani.</h3>
                                     <div class="line"></div>
                                     <a href="floor-detail.html" class="btn-border-white">READ MORE</a>
-                                     <a onclick="closeAlert()">&#10006;</a>
+                                     <!-- <a onclick="closeAlert()">&#10006;</a> -->
                                 </div>
                                  <div class="maparea-isi left" id="tiga-isi">
                                     <img src="img/floorplan.png" height="100">
                                     <h3>Am int ressequi voluptae iducit odit karmi.</h3>
                                     <div class="line"></div>
                                     <a href="floor-detail.html" class="btn-border-white">READ MORE</a>
-                                     <a onclick="closeAlert()">&#10006;</a>
+                                     <!-- <a onclick="closeAlert()">&#10006;</a> -->
                                 </div>
                                  <div class="maparea-isi right" id="empat-isi">
                                     <img src="img/floorplan.png" height="100">
                                     <h3>Am int ressequi voluptae iducit odit alana.</h3>
                                     <div class="line"></div>
                                     <a href="floor-detail.html" class="btn-border-white">READ MORE</a>
-                                     <a onclick="closeAlert()">&#10006;</a>
+                                     <!-- <a onclick="closeAlert()">&#10006;</a> -->
                                 </div>
 
                       </div>
@@ -323,7 +343,7 @@
                                   <div class='film_roll_child'><img src="img/5.jpg"></div>
                         </div>
                         <div style='display:none'>
-                          <div><a href='#'><img src="http://placehold.it/800x1080"></a></div>
+                          <div><a href='#'><img src="img/controll-slide.png"></a></div>
                           <div><a href='#'><img src="http://placehold.it/1200x1080"></a></div>
                         </div>
 
@@ -386,10 +406,10 @@
 
                     <!-- Controls -->
                     <a class="left carousel-control" href="#gallCarousel" data-slide="prev">
-                        <span class="icon-prev"></span>
+                        <span class="gall-control icon-prev"></span>
                     </a>
                     <a class="right carousel-control" href="#gallCarousel" data-slide="next">
-                        <span class="icon-next"></span>
+                        <span class="gall-control icon-next"></span>
                     </a>
 
                     <!-- SLICK ===========================  -->
@@ -458,7 +478,7 @@
     <div class="footer" style="">
             <img src="img/sosmed.png" width="100;">
             <div style="margin:5px;"></div>
-            <p style="font-size: 10px; color:white; text-shadow: 1px 1px 4px #000;">COPYRIGHT 2016 - MANAGE BY TELKOM INDONESIA </p>
+            <p style="font-size: 10px; color:white; text-shadow: 1px 1px 4px #000;">COPYRIGHT 2016 - MANAGE BY TELKOM INDONESIA</p>
     </div>
 
 
@@ -700,9 +720,13 @@ function initialize() {
             if($("#box-gall-slick.show").is(":visible")) {
                     $("#box-gall-slick").removeClass("show");
                     $("#show-box-gall").removeClass("active");
+
+                    $('.gall-control').addClass("active");
             } else {
                     $("#box-gall-slick").addClass("show");
                     $("#show-box-gall").addClass("active");
+
+                    $('.gall-control').removeClass("active");
             }
 
   });
