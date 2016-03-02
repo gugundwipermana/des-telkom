@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html style="height:100%;">
 <html>
 <head>
     <meta charset="utf-8">
@@ -6,18 +6,19 @@
     <title></title>
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
     <link rel="stylesheet" href="css/onepage-scroll.css">
-
     <link rel="stylesheet" href="plugins/superslides/superslides.css">
+    <link rel="stylesheet" href="plugins/slick/slick.css">
 
     <link rel="stylesheet" href="css/main.css">
 </head>
-<body>
+<body style="height:100%;">
 
-    <div class="li-nav" style="position:fixed; top:5px; left: 5%; z-index:1031;"><a href="#1" data-index="1"><img src="img/logo.png" width="45;"></a></div>
+    <div class="logo white li-nav" style=""><a href="#1" data-index="1"><img src="img/logo-white.png" width="45;"></a></div>
+    <div class="logo red li-nav" style=""><a href="#1" data-index="1"><img src="img/logo.png" width="45;"></a></div>
     <div class="menu-right">
-            <a href="#"><img src="img/search.png" width="15;"></a>
-            <a href="#">EN <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></a>
-            <a href="#"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></a>
+            <a href="#" id="show-search"><span class="glyphicon glyphicon-search" aria-hidden="true"></span><!-- <img src="img/search.png" width="15;"> --></a>
+            <a href="#" id="show-lang">EN <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></a>
+            <a href="#" id="show-nav"><span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span></a>
     </div>
 
     <div class="box-search">
@@ -29,7 +30,14 @@
             </div><!-- /input-group -->
     </div>
 
-    <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="box-lang">
+            <ul>
+                    <li><strong>ENGLISH</strong></li>
+                    <li>INDONESIA</li>
+            </ul>
+    </div>
+
+    <nav class="navbar navbar-default navbar-fixed-top navbar-costum">
       <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
@@ -54,15 +62,12 @@
             <li class="li-nav"><a href="#8" data-index="8">CONTACT</a></li>
            
           </ul>
-         
         </div><!-- /.navbar-collapse -->
       </div><!-- /.container-fluid -->
     </nav>
     
-    <div class="main">
+    <div class="main" style="height:100%;">
             <section class="page landing">
-
-                   
                     <div id="slides">
                         <div class="slides-container">
                           <li>
@@ -89,19 +94,12 @@
                           <a href="#" class="next">Next</a>
                           <a href="#" class="prev">Previous</a>
                         </nav> -->
-                      </div>
-                   
-                    
-                            
-                                            
 
+                      </div>
                             <div class="box-scroll-down">
                                     <p>Scroll Down</p>
                                     <span class="li-nav"><a href="#2" data-index="2"><img src="img/chevron-down.png" width="45;"></a></a></span>
                             </div>
-
-                            
-                 
             </section>
             <section class="page buildings">
                     <div class="box-middle-vertical">
@@ -119,55 +117,54 @@
                             <div class="container ct">
                                     <div class="row spasinull">
                                       <div class="col-sm-2 col-xs-4 spasinull">
-                                        <div class="thumbnail">
+                                        <a href="about.html" class="thumbnail">
                                           <img src="img/about.png" alt="...">
                                           <div class="caption">
                                             <p>ABOUT US</p>
                                           </div>
-                                        </div>
+                                        </a>
                                       </div>
                                       <div class="col-sm-2 col-xs-4 spasinull">
-                                        <div class="thumbnail">
+                                        <a href="design.html" class="thumbnail">
                                           <img src="img/designs.png" alt="...">
                                           <div class="caption">
                                             <p>DESIGNS</p>
                                           </div>
-                                        </div>
+                                        </a>
                                       </div>
                                       <div class="col-sm-2 col-xs-4 spasinull">
-                                        <div class="thumbnail">
+                                        <a href="building.html" class="thumbnail">
                                           <img src="img/buildings.png" alt="...">
                                           <div class="caption">
                                             <p>BUILDING SPECIFICATION</p>
                                           </div>
-                                        </div>
+                                        </a>
                                       </div>
                                       <div class="col-sm-2 col-xs-4 spasinull">
-                                        <div class="thumbnail">
+                                        <a href="project.html" class="thumbnail">
                                           <img src="img/project.png" alt="...">
                                           <div class="caption">
                                             <p>PROJECT TEAM</p>
                                           </div>
-                                        </div>
+                                        </a>
                                       </div>
                                       <div class="col-sm-2 col-xs-4 spasinull">
-                                        <div class="thumbnail">
+                                        <a href="awards.html" class="thumbnail">
                                           <img src="img/awards.png" alt="...">
                                           <div class="caption">
                                             <p>AWARDS & CERTIFICATION</p>
                                           </div>
-                                        </div>
+                                        </a>
                                       </div>
-                                      <div class="col-sm-2 col-xs-4 spasinull">
-                                        <div class="thumbnail">
+                                      <div class="col-sm-2 col-xs-4 spasinull li-nav">
+                                        <a class="thumbnail" href="#8" data-index="8">
                                           <img src="img/contact.png" alt="...">
                                           <div class="caption">
                                             <p>CONTACT</p>
                                           </div>
-                                        </div>
+                                        </a>
                                       </div>
                                     </div>
-
                             </div>
                      </div>
             </section>
@@ -193,16 +190,13 @@
                     </div>
             </section>
             <section class="page floorplan" style="color: white;">
-
                     <div class="row ">
                       <div class="col-sm-6 spasinull">
                            <div class="container" style="">
                                     <div class="box">
                                             <p>FLOORPLAN</p>
                                             <h1 class="h2-dinamis spasinull">Flexible & Efficient Column-Free Floorplan</h1>
-
                                             <div class="line"></div>
-
                                             <p>
                                                     Each floor gives slightly different experience due to the dynamics twisting building design. Tenants enjoy a choice of multiple zones and layout configurations thanks to the flexible and efficient column-free floor plan. Columns are located in the building perimeter, leaving the center open. Most working areas enjoy plenty of daylight during working hours, while the generous 2.8m floor-to-ceiling height enhances the feeling of spaciousness.
                                             </p>
@@ -221,35 +215,38 @@
                                         <area class="maparea" id="empat" data-posisi="right" shape="circle" coords="387,317,10,10" title="Empat" data-maphilight='{"fillColor":"00ff00","shadow":true,"shadowBackground":"ffffff","alwaysOn":true}'>
                                 </map>
 
-                                <div class="maparea-isi" id="satu-isi" style="position:absolute; top: 100px; left: 100px; display:none; padding: 10px; width:250px; text-align:left;">
+                                <div class="maparea-isi left" id="satu-isi">
+                                    <img src="img/floorplan.png" height="100">
                                     <h3>Am int ressequi voluptae iducit odit officat.</h3>
                                     <div class="line"></div>
-                                    <a href="" class="btn-border-white">READ MORE</a>
-                                    <!-- <a onclick="closeAlert()">&#10006;</a> -->
+                                    <a href="floor-detail.html" class="btn-border-white">READ MORE</a>
+                                    <a onclick="closeAlert()">&#10006;</a>
                                 </div>
-                                 <div class="maparea-isi" id="dua-isi" style="position:absolute; top: 100px; left: 100px; display:none; padding: 10px; width:250px; text-align:left;">
-                                    <h3>Am int ressequi voluptae iducit odit officat.</h3>
+                                 <div class="maparea-isi right" id="dua-isi">
+                                    <img src="img/floorplan.png" height="100">
+                                    <h3>Am int ressequi voluptae iducit odit odani.</h3>
                                     <div class="line"></div>
-                                    <a href="" class="btn-border-white">READ MORE</a>
-                                     <!-- <a onclick="closeAlert()">&#10006;</a> -->
+                                    <a href="floor-detail.html" class="btn-border-white">READ MORE</a>
+                                     <a onclick="closeAlert()">&#10006;</a>
                                 </div>
-                                 <div class="maparea-isi" id="tiga-isi" style="position:absolute; top: 100px; left: 100px; display:none; padding: 10px; width:250px; text-align:left;">
-                                    <h3>Am int ressequi voluptae iducit odit officat.</h3>
+                                 <div class="maparea-isi left" id="tiga-isi">
+                                    <img src="img/floorplan.png" height="100">
+                                    <h3>Am int ressequi voluptae iducit odit karmi.</h3>
                                     <div class="line"></div>
-                                    <a href="" class="btn-border-white">READ MORE</a>
-                                     <!-- <a onclick="closeAlert()">&#10006;</a> -->
+                                    <a href="floor-detail.html" class="btn-border-white">READ MORE</a>
+                                     <a onclick="closeAlert()">&#10006;</a>
                                 </div>
-                                 <div class="maparea-isi" id="empat-isi" style="position:absolute; top: 100px; left: 100px; display:none; padding: 10px; width:250px; text-align:left;">
-                                    <h3>Am int ressequi voluptae iducit odit officat.</h3>
+                                 <div class="maparea-isi right" id="empat-isi">
+                                    <img src="img/floorplan.png" height="100">
+                                    <h3>Am int ressequi voluptae iducit odit alana.</h3>
                                     <div class="line"></div>
-                                    <a href="" class="btn-border-white">READ MORE</a>
-                                     <!-- <a onclick="closeAlert()">&#10006;</a> -->
+                                    <a href="floor-detail.html" class="btn-border-white">READ MORE</a>
+                                     <a onclick="closeAlert()">&#10006;</a>
                                 </div>
 
                       </div>
                     </div>
 
-                    
             </section>
             <section class="page facilities">
                         <div class="item" style="background-image: url('img/gall2.jpg'); ">
@@ -316,19 +313,29 @@
                                 </div>
                         </div>
             </section>
-            <section class="page news">
+            <section class="page news" style="height:100%;">
 
-
+                        <div id='film_roll' style="height:100%;">
+                                  <div class='film_roll_child'><img src="img/1.jpg"></div>
+                                  <div class='film_roll_child'><img src="img/2.jpg"></div>
+                                  <div class='film_roll_child'><img src="img/3.jpg"></div>
+                                  <div class='film_roll_child'><img src="img/4.jpg"></div>
+                                  <div class='film_roll_child'><img src="img/5.jpg"></div>
+                        </div>
+                        <div style='display:none'>
+                          <div><a href='#'><img src="http://placehold.it/800x1080"></a></div>
+                          <div><a href='#'><img src="http://placehold.it/1200x1080"></a></div>
+                        </div>
 
             </section>
             <section class="page galleries">
                      <div id="gallCarousel" class="carousel slide">
                     <!-- Indicators -->
-                    <ol class="carousel-indicators">
+                    <!-- <ol class="carousel-indicators">
                         <li data-target="#gallCarousel" data-slide-to="0" class="active"></li>
                         <li data-target="#gallCarousel" data-slide-to="1"></li>
                         <li data-target="#gallCarousel" data-slide-to="2"></li>
-                    </ol>
+                    </ol> -->
 
                     <!-- Wrapper for Slides -->
                     <div class="carousel-inner">
@@ -336,7 +343,7 @@
                             <!-- Set the first background image using inline CSS below. -->
                             <div class="fill" style="background-image:url('img/gall1.jpg');"></div>
                             <div class="carousel-caption">
-                                <h2>LOBBY</h2>
+                                <h2>SATU</h2>
                             </div>
                         </div>
                         <div class="item">
@@ -350,10 +357,32 @@
                             <!-- Set the third background image using inline CSS below. -->
                             <div class="fill" style="background-image:url('img/gall3.jpg');"></div>
                             <div class="carousel-caption">
-                                <h2>OFFICE</h2>
+                                <h2>TIGA</h2>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <!-- Set the first background image using inline CSS below. -->
+                            <div class="fill" style="background-image:url('img/gall4.jpg');"></div>
+                            <div class="carousel-caption">
+                                <h2>EMPAT</h2>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <!-- Set the second background image using inline CSS below. -->
+                            <div class="fill" style="background-image:url('img/gall5.jpg');"></div>
+                            <div class="carousel-caption">
+                                <h2>LIMA ROOM</h2>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <!-- Set the third background image using inline CSS below. -->
+                            <div class="fill" style="background-image:url('img/landing.jpg');"></div>
+                            <div class="carousel-caption">
+                                <h2>ENAM</h2>
                             </div>
                         </div>
                     </div>
+                    
 
                     <!-- Controls -->
                     <a class="left carousel-control" href="#gallCarousel" data-slide="prev">
@@ -363,6 +392,19 @@
                         <span class="icon-next"></span>
                     </a>
 
+                    <!-- SLICK ===========================  -->
+                    <div id="show-box-gall" class="active"></div>
+                    <div id="box-gall-slick" class="show">
+                    <div class="slider autoplay">
+                        <div class="indicator" style="background-image: url('img/gall1.jpg');" data-target="#gallCarousel" data-slide-to="0"><div class="overlay lima"></div></div>
+                        <div class="indicator" style="background-image: url('img/gall2.jpg');" data-target="#gallCarousel" data-slide-to="1"><div class="overlay lima"></div></div>
+                        <div class="indicator" style="background-image: url('img/gall3.jpg');" data-target="#gallCarousel" data-slide-to="2"><div class="overlay lima"></div></div>
+                        <div class="indicator" style="background-image: url('img/gall4.jpg');" data-target="#gallCarousel" data-slide-to="3"><div class="overlay lima"></div></div>
+                        <div class="indicator" style="background-image: url('img/gall5.jpg');" data-target="#gallCarousel" data-slide-to="4"><div class="overlay lima"></div></div>
+                        <div class="indicator" style="background-image: url('img/landing.jpg');" data-target="#gallCarousel" data-slide-to="5"><div class="overlay lima"></div></div>
+                    </div>
+                    </div>
+
                 </div>
             </section>
             <section class="page contact">
@@ -370,11 +412,8 @@
                       <div class="col-sm-5 spasinull">
                             <div class="container" style="">
                                     <div class="box">
-
                                             <h1 class="h2-dinamis spasinull">Contact</h1>
-
                                             <div class="line"></div>
-
                                             <ul>
                                                     <li><strong>PT. Telkom Landmark Tower</strong></li>
                                                     <li>Graha Merah Putih, 6<sup>th</sup> Floor</li>
@@ -383,7 +422,8 @@
                                             </ul>
                                             <br/>
                                             <p>DEVELOPED BY:</p>
-                                            <img src="img/logo.png" width="45;">
+                                            <img src="img/logo.png" height="45;" style="margin-right: 60px;">
+                                            <img src="img/by.png" height="45;">
 
                                             <table id="table-message">
                                                     <tr>
@@ -409,7 +449,6 @@
                                     </div>
                             </div>
                       </div>
-                      
                       <div class="col-sm-7 spasinull" style="background-image: url('img/gall4.jpg'); background-size: cover; min-height: 100vh">
                       </div>
                     </div>
@@ -431,6 +470,9 @@
     <!-- <script src="plugins/imagemaps/jquery.maphilight.js" type="text/javascript"></script> -->
     <script src="plugins/imagemaps/jquery.rwdImageMaps.js" type="text/javascript"></script>
     <!-- <script src="plugins/imagemaps/map_rollover.js" type="text/javascript"></script> -->
+
+    <script src="plugins/slick/slick.js" type="text/javascript"></script>
+    <script src="plugins/film/jquery.film_roll.js" type="text/javascript"></script>
 
      <script>
         $('.carousel').carousel({
@@ -573,7 +615,13 @@ function initialize() {
             }
 
             closeAlert();
-            $('#'+id+'-isi').css({'display': 'block', 'top': mouseY, 'left': mouseX});
+            if(window.innerWidth > 992) {
+                    $('.maparea-isi').removeClass('mobile');
+                    $('#'+id+'-isi').css({'display': 'block', 'top': mouseY, 'left': mouseX});
+            } else {
+                    $('.maparea-isi').addClass('mobile');
+                    $('#'+id+'-isi').css({'display': 'block', 'top': '50%', 'left': '50%'});
+            }
             
         })
 
@@ -596,6 +644,91 @@ function initialize() {
       animation: 'fade',
         play: 3000
     });
+  </script>
+
+
+  <script>
+  // menampilkan dialoh serch
+  $("#show-search").click(function() {
+            if($(".box-search.active").is(":visible")) {
+                    $(".box-search").removeClass("active");
+            } else {
+                    $(".box-search").addClass("active");
+                    $(".box-lang").removeClass("active");
+            }
+
+  });
+
+   $("#show-lang").click(function() {
+            if($(".box-lang.active").is(":visible")) {
+                    $(".box-lang").removeClass("active");
+            } else {
+                    $(".box-lang").addClass("active");
+                    $(".box-search").removeClass("active");
+            }
+
+  });
+
+  $("#show-nav").click(function() {
+            if($(".navbar-costum.active").is(":visible")) {
+                    $(".navbar-costum").removeClass("active");
+
+                    $("#show-nav .glyphicon").addClass("glyphicon-menu-hamburger");
+                    $("#show-nav .glyphicon").removeClass("glyphicon-remove");
+                    $("#show-nav").removeClass("glyphicon-menu-hamburger");
+
+                    $(".menu-right").removeClass("active");
+
+                    $(".logo.red").removeClass("active");
+
+            } else {
+                    $(".navbar-costum").addClass("active");
+
+                     $("#show-nav").addClass("glyphicon-remove");
+
+                     $("#show-nav .glyphicon").addClass("glyphicon-remove");
+                     $("#show-nav .glyphicon").removeClass("glyphicon-menu-hamburger");
+                     $("#show-nav").removeClass("glyphicon-remove");
+
+                     $(".menu-right").addClass("active");
+
+                     $(".logo.red").addClass("active");
+            }
+  })
+
+  $("#show-box-gall").click(function() {
+            if($("#box-gall-slick.show").is(":visible")) {
+                    $("#box-gall-slick").removeClass("show");
+                    $("#show-box-gall").removeClass("active");
+            } else {
+                    $("#box-gall-slick").addClass("show");
+                    $("#show-box-gall").addClass("active");
+            }
+
+  });
+  </script>
+
+
+  <script>
+        $('.autoplay').slick({
+                slidesToShow: 5,
+                slidesToScroll: 1,
+                autoplay: true,
+                autoplaySpeed: 2000,
+        });   
+  </script>
+
+  <script>
+            // Generated by CoffeeScript 1.10.0
+            jQuery(function() {
+              this.film_rolls = new FilmRoll({
+                container: '#film_roll',
+                scroll: false
+              });
+              return jQuery('a.more_link').click(function() {
+                return jQuery('#more').slideToggle();
+              });
+            });
   </script>
   
 
