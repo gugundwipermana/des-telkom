@@ -105,13 +105,13 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 { 
-    font-size: 2em;
+    font-size: 2.5em;
     margin-top: 0.67em;
     margin-bottom: 0.67em;
 }
 
 h2 {
-    font-size: 1.5em;
+    font-size: 1.7em;
     margin-top: 0.83em;
     margin-bottom: 0.83em;
 }
@@ -252,6 +252,12 @@ ul {
      .logo.red {
             /*top: -50px; */
             z-index:1031;
+
+            transition: all .5s ease;
+            -moz-transition: all .5s ease;
+            -ms-transition: all .5s ease;
+            -webkit-transition: all .5s ease;
+            -o-transition: all .5s ease;
       }
 
       .logo.red.active {
@@ -535,17 +541,52 @@ ul {
       top: 30%;
 
 }
+
+.landing .slides-pagination {
+      display: none;
+}
+
       .box-scroll-down {
             position: absolute;
-            bottom: 20%;
+            bottom: 10%;
             left:0; 
             right:0;
             z-index: 2;
       }
 
+        /*animasi tombol slidebottom*/
+        @keyframes flickerAnimationTB {
+          0%   { padding-top: 2%; padding-bottom: 0%; }
+          50%  { padding-top: 1%; padding-bottom: 1%; }
+          100% { padding-top: 2%; padding-bottom: 0%; }
+        }
+        @-o-keyframes flickerAnimationTB {
+          0%   { padding-top: 2%; padding-bottom: 0%; }
+          50%  { padding-top: 1%; padding-bottom: 1%; }
+          100% { padding-top: 2%; padding-bottom: 0%; }
+        }
+        @-moz-keyframes flickerAnimationTB {
+          0%   { padding-top: 2%; padding-bottom: 0%; }
+          50%  { padding-top: 1%; padding-bottom: 1%; }
+          100% { padding-top: 2%; padding-bottom: 0%; }
+        }
+        @-webkit-keyframes flickerAnimationTB {
+          0%   { padding-top: 2%; padding-bottom: 0%; }
+          50%  { padding-top: 1%; padding-bottom: 1%; }
+          100% { padding-top: 2%; padding-bottom: 0%; }
+        }
+
+        .box-scroll-down {
+           -webkit-animation: flickerAnimationTB 1.5s infinite;
+           -moz-animation: flickerAnimationTB 1.5s infinite;
+           -o-animation: flickerAnimationTB 1.5s infinite;
+            animation: flickerAnimationTB 1.5s infinite;
+        }
+
 .landing  {
     height: 100%;
 }
+
 /*
 .landing .carousel,
 .landing .item,
@@ -579,7 +620,7 @@ ul {
     padding-top: 50px;
     text-align: center; 
     color: white;
-    margin-top: 50px;
+    margin-top: 0px;
 }
        .buildings .container {
               width: 90%;
@@ -591,7 +632,7 @@ ul {
 
       @media (min-width: 768px) {
               .buildings {
-                    margin-top: 0px;
+                    /*margin-top: 50px;*/
               }
 
               .buildings .container {
@@ -599,7 +640,7 @@ ul {
               }
 
               .buildings .container.ct {
-                    width: 60%;
+                    width: 40%;
                     padding:  20px 0;
               }
       }
@@ -624,6 +665,7 @@ ul {
       .buildings .thumbnail .caption {
             color: white;
             padding: 0;
+            padding-top: 5px;
       }
             .buildings .thumbnail .caption p {
                   font-size: 11px;
@@ -829,73 +871,6 @@ ul {
  *  FACILITIES PAGE
  *
  */
-.facilities {
-      margin-top: 50px;
-      overflow: hidden;
-}
- .facilities .item {
-        height:10%; 
-        width: 100%; 
-        overflow: hidden; 
-
-        background-position: center;
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        background-size: cover;
-        -o-background-size: cover;
-
-        float:left;
-        cursor: pointer;
-
-        transition: all .5s ease;
-        -moz-transition: all .5s ease;
-        -ms-transition: all .5s ease;
-        -webkit-transition: all .5s ease;
-        -o-transition: all .5s ease;
- }
-
-        .facilities .item:hover .overlay {
-                background-color: rgba(0,0,0, .7);
-        }
-
-        .facilities .item:hover {
-                transform: scale(1.1);
-                -moz-transform: scale(1.1);
-                -webkit-transform: scale(1.1);
-                -o-transform: scale(1.1);
-                -ms-transform: scale(1.1); /* IE 9 */
-        }
-
-        .facilities .item .caption h2 {
-                position: absolute;
-                bottom: 10%;
-                left: 10%;
-                margin-left: 13px;
-
-                color: white;
-
-                transform: rotate(0deg);
-                transform-origin: left bottom  0;
-                width: 100vh;
-        }
-
-
-@media screen and (orientation: landscape) {
-        .facilities {
-              margin-top: 0px;
-        }
-
-        .facilities .item {
-              height:100%; 
-              width: 11.1%; 
-        }
-
-        .facilities .item .caption h2 {
-              transform: rotate(270deg);
-              left: 50%;
-        }
-}
-
 
 
 /**
@@ -904,180 +879,12 @@ ul {
  *
  */
 
-
-
-div.film_roll_child {
-  height: 100%;
-}
-div.film_roll_child img {
-  height: 100%;
-  max-width: none;
-  max-height: 100%;
-}
-div.film_roll_wrapper {
-  overflow-x: hidden;
-}
-
-.film_roll_pager {
-        display: none;
-}
-
-
-
-
-/* COSTUM FILM _ROLL*/
-
-        .film_roll_wrapper {
-          display:block;
-          text-align:center;
-          float:none;
-          position:relative;
-          top:auto;
-          right:auto;
-          bottom:auto;
-          left:auto;z-index:auto;
-          width:100%;
-          height:100%;
-          margin:0 !important;
-          padding:0 !important;
-          overflow:hidden;
-          } 
-
-          .film_roll_shuttle {
-            text-align:left;
-            float:none;
-            position:relative;
-            top:0;
-            left:0;
-            right:auto;
-            bottom:auto;
-            height:100%;
-            margin:0 !important;
-            padding:0 !important;
-            z-index:auto;
-            } 
-
-            .film_roll_shuttle.vertical_center:before {
-              content:'';
-              display:inline-block;
-              height:100%;
-              vertical-align:middle;
-              margin-right:-0.25em;
-              } 
-
-              .film_roll_child {
-                position:relative;
-                display:inline-block;
-                *display:inline;
-                vertical-align:middle;
-                zoom:1;
-                } 
-
-                .film_roll_prev,.film_roll_next {
-                  position:absolute;
-                  top:48%;
-                  left:15px;
-                  width:40px;
-                  height:40px;
-                  margin:-20px 0 0 0;
-                  padding:0;
-                  font-size:60px;
-                  font-weight:100;
-                  line-height:30px;
-                  color:white;
-                  text-align:center;
-                  background:#222;
-                  border:3px solid white;
-                  border-radius:23px;
-                  opacity:0.5;
-                } 
-
-                  .film_roll_prev:hover,
-                  .film_roll_next:hover,
-                  .film_roll_prev:focus,
-                  .film_roll_next:focus {
-                    color:white;
-                    text-decoration:none;
-                    opacity:0.9;
-                    color: transparent;
-                    }
-
-                     .film_roll_next {
-                      left:auto;
-                      right:15px;
-                      } 
-
-                      .film_roll_pager {
-                        text-align:center;
-                      }
-
-                         .film_roll_pager a {
-                          width:5px;
-                          height:5px;
-                          border:2px solid #333;
-                          border-radius:5px;
-                          display:inline-block;
-                          margin:0 5px 0 0;
-                         /* transition:all 1s ease; */
-
-                           transition: all 1s ease;
-                          -moz-transition: all 1s ease;
-                          -ms-transition: all 1s ease;
-                          -webkit-transition: all 1s ease;
-                          -o-transition: all 1s ease;
-                        }
-                         /* .film_roll_pager a:hover{
-                            background:#666
-                            } 
-                            .film_roll_pager a.active{
-                              background:#333
-                              } */
-                              .film_roll_pager span {
-                                display:none
-                                }
-
-                                 .film_roll_pager a,
-                                 a.film_roll_prev,
-                                 a.film_roll_next {
-                                  -webkit-box-sizing: content-box;
-                                  -moz-box-sizing: content-box;
-                                  box-sizing: content-box;
-                                }
-
-      .film_roll_prev, .film_roll_next {
-            width: 40px;
-            height: 80px;
-            border: 0;
-            border-radius: 0;
-            opacity: 1;
-            background: rgba(0,0,0,0);
-            
-
-            background-image: url('../img/controll-slide.png');
-              -webkit-background-size: cover;
-              -moz-background-size: cover;
-              background-size: cover;
-              -o-background-size: cover;
-
-              cursor: pointer;
-              color: transparent;
-              outline: none;
-      }
-
-      .film_roll_prev {
-            left: 0px;
-      }
-
-       .film_roll_next {
-              -ms-transform: rotate(180deg); /* IE 9 */
-              -webkit-transform: rotate(180deg); /* Chrome, Safari, Opera */
-              transform: rotate(180deg);
-
-              right:0px
+        .news .line {
+                width:40px; 
+                height:2px; 
+                background-color: #ef434d; 
+                margin: 10px 0 17px 0;
         }
-
-
-
 
 /**
  *
@@ -1085,24 +892,28 @@ div.film_roll_wrapper {
  *
  */
 
-.galleries  {
+.galleries, .facilities, .news  {
     height: 100%;
     overflow: hidden;
 }
 
-.galleries .carousel,
-.galleries .item,
-.galleries .active {
+.galleries .carousel, .facilities .carousel, .news .carousel,
+.galleries .item, .facilities .item, .news .item,
+.galleries .active, .facilities .active, .news .active {
     height: 100%;
 }
 
-.galleries .carousel-inner {
+.galleries .carousel-inner,
+.facilities .carousel-inner,
+.news .carousel-inner {
     height: 100%;
 }
 
 /* Background images are set within the HTML using inline CSS, not here */
 
-.galleries .fill {
+.galleries .fill,
+.facilities .fill,
+.news .fill {
     width: 100%;
     height: 100%;
     background-position: center;
@@ -1112,7 +923,9 @@ div.film_roll_wrapper {
     -o-background-size: cover;
 }
 
-#show-box-gall {
+#show-box-gall,
+#show-box-fac,
+#show-box-news {
         position: absolute;
         z-index: 101;
         left: 50%;
@@ -1136,9 +949,11 @@ div.film_roll_wrapper {
         -o-transition: all .5s ease;
 }
 
-#box-gall-slick {
+#box-gall-slick,
+#box-fac-slick,
+#box-news-slick {
         position: absolute;
-        bottom: -25vh;
+        bottom: -20vh;
         left: 0;
         right: 0;
         z-index: 100;
@@ -1151,12 +966,16 @@ div.film_roll_wrapper {
 }
 
 @media (min-width: 768px) {
-        #show-box-gall.active {
+        #show-box-gall.active,
+        #show-box-fac.active,
+        #show-box-news.active {
                 background-image: url('../img/controll-slide-hid.png');
-                bottom: 25vh;
+                bottom: 20vh;
         }
 
-        #box-gall-slick.show {
+        #box-gall-slick.show,
+        #box-fac-slick.show,
+        #box-news-slick.show {
               bottom: 0px;
         }
 }
@@ -1184,6 +1003,15 @@ div.film_roll_wrapper {
                           cursor: pointer;
                 }
 
+                 .indicator .lima .caption {
+                         position: absolute;
+                         width: 100%;
+                         text-align: left;
+                         top: 30%;
+                         padding-left: 20%;
+
+                          color: white;
+                 }
       @media screen and (orientation: landscape) {
             /*#show-box-gall {
                       bottom: 0vh;
@@ -1193,7 +1021,7 @@ div.film_roll_wrapper {
                       }*/
 
             .slider.autoplay .indicator {
-                      height: 25vh;
+                      height: 20vh;
             }
       }
 
@@ -1235,22 +1063,32 @@ div.film_roll_wrapper {
               transform: rotate(180deg);
       }
 
-.galleries .carousel-caption {
-      bottom: 25%;
+.galleries .carousel-caption,
+.facilities .carousel-caption,
+.news .carousel-caption {
+      bottom: 20%;
       text-align: left;
-      left: 5%;
+      left: 10%;
+       line-height: 70%;
+}
+
+
+.news .carousel-caption {
+        bottom: 30%;
 }
 
 
 .carousel-control.left, .carousel-control.right {
       background-image: none;
+      width: 40px;
 }
 
-.carousel-control .icon-prev:before, .carousel-control .icon-next:before {
+.carousel-control .icon-prev:before, 
+.carousel-control .icon-next:before {
       content: '';
 } 
 
-.gall-control {
+.gall-control, .fac-control, .news-control {
             position: absolute;
             top: 45%;
             width: 40px;
@@ -1270,17 +1108,21 @@ div.film_roll_wrapper {
               outline: none;
       }
 
-      .gall-control.active {
+      .gall-control.active, .fac-control.active, .news-control.active {
               background-image: url('../img/controll-slide.png');
       }
 
-      .gall-control.icon-prev {
+      .gall-control.icon-prev,
+      .fac-control.icon-prev,
+      .news-control.icon-prev {
             left: 10px;
             width: 40px;
             height: 80px;
       }
 
-       .gall-control.icon-next {
+       .gall-control.icon-next,
+       .fac-control.icon-next,
+       .news-control.icon-next {
               -ms-transform: rotate(180deg); /* IE 9 */
               -webkit-transform: rotate(180deg); /* Chrome, Safari, Opera */
               transform: rotate(180deg);
@@ -1300,19 +1142,26 @@ div.film_roll_wrapper {
 
  .contact {
         background-color: #e8e5e0;
-        padding-top: 50px;
  }
-
-      .contact .container {
-            padding: 0 10% 0 20%;
-            width: 100%;
-      }
 
       .contact .line {
             width:50px; 
             height:3px; 
-            background-color: #ef434d; 
-            margin: 10px 0;
+            background-color: #ef434d;
+            /*margin: 10px 0;*/
+            margin: 20px 0;
+      }
+
+       .contact .atas {
+            min-height:0vh;
+            margin-bottom: 20px;
+      }
+      
+
+      .contact .container {
+            min-height:60vh; 
+            padding: 0 10% 0 10%;
+            width: 100%;
       }
 
       .contact .box {
@@ -1320,27 +1169,41 @@ div.film_roll_wrapper {
             margin-top: 5%;
       }
 
-      @media (min-width: 768px) {
-          
-          .contact {
-              padding-top: 0;
+      .contact .bawah {
+        text-align: left;
+        padding-top: 50px;
+      }
+
+          .contact   p,  .contact  li, .contact  td {
+                 /*line-height: 200%;*/
+                 color: #666;
           }
 
+      @media (min-width: 768px) {
+
           .contact .line {
-              margin: 20px 0;
+              /*margin: 20px auto;*/
+          }
+
+          .contact .atas {
+                min-height: 50vh; /*100vh;*/
+                margin-bottom: 0px;
+          }
+
+          .contact .bawah {
+                padding-top: 30px;
           }
 
           .contact .container {
+                /*min-height:100vh; */
+                padding: 0 10% 0 10%; /*0 20% 0 10%;*/
           }
 
-          .contact .box {
-                margin-top: 30%;
-          }
-
-          .contact .box p {
-                 line-height: 200%;
-          }
+          /*.locations .box {
+                margin-top: 45%;
+          }*/
       }
+
 
 #table-message {
       margin: 10px 0;
@@ -1354,6 +1217,9 @@ div.film_roll_wrapper {
 .contact  input[type=submit] {
       font-size: 10px;
       margin-bottom: 20px;
+      background-color: #666;
+      color: white;
+      border: 0;
 }
 
 #table-message  input[type=text], #table-message input[type=email], #table-message textarea {
@@ -1427,6 +1293,25 @@ div.film_roll_wrapper {
 }
 
 
+.about .caption p, .about .caption h3 {
+      color: #888;
+      line-height: 50%;
+}
+
+.about .thumbnail {
+      background-color: rgba(0,0,0,0);
+      border: 0;
+      margin-bottom: 0;
+}
+      .about .thumbnail img {
+          height: 150px;
+      }
+
+      .about .thumbnail .caption {
+            padding: 0;
+      }
+
+
 
 /**
  *
@@ -1450,7 +1335,7 @@ div.film_roll_wrapper {
      .building-detail .line {
             width:50px; 
             height:3px; 
-            background-color: #ef434d; 
+            background-color: #fff; 
             margin: 20px auto;
       }
 
@@ -1496,8 +1381,8 @@ div.film_roll_wrapper {
     .project .line {
             width:50px; 
             height:3px; 
-            background-color: #ef434d; 
-            margin: 20px auto;
+            background-color: #fff; 
+            margin: 30px auto;
       }
 
 @media (min-width: 768px) {
@@ -1538,7 +1423,7 @@ div.film_roll_wrapper {
      .awards .line {
             width:50px; 
             height:3px; 
-            background-color: #ef434d; 
+            background-color: #fff; 
             margin: 20px auto;
       }
 
@@ -1649,4 +1534,69 @@ div.film_roll_wrapper {
     bottom: 10px; 
     left:5%;
     z-index: 2;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =========================================================================================================================== */
+
+/*
+|--------------------------------------------------------------------------------
+| ANIMATION
+|--------------------------------------------------------------------------------
+|
+|
+*/
+
+.logo, 
+.onepage-pagination,
+.box-scroll-down,
+.menu-right,
+.footer,
+#landing-anime,
+#text-one,
+#text-two,
+#text-three,
+#land-logo,
+#slides {
+  opacity: 0;
+
+        transition: all 2s ease;
+        -moz-transition: all 2s ease;
+        -ms-transition: all 2s ease;
+        -webkit-transition: all 2s ease;
+        -o-transition: all 2s ease;
+}
+
+#landing-anime, #slides {
+       transition: all 1s ease;
+        -moz-transition: all 1s ease;
+        -ms-transition: all 1s ease;
+        -webkit-transition: all 1s ease;
+        -o-transition: all 1s ease;
+}
+
+#text-one,
+#text-two,
+#text-three {
+      transform: translateY(100px);
+}
+
+#land-logo { 
+      transform: translateY(-100px);
 }
