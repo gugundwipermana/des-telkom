@@ -263,6 +263,9 @@ var fx = {
         $outgoing = $children.eq(orientation.outgoing_slide),
         $target = $children.eq(orientation.upcoming_slide);
 
+        $(".slides-item").removeClass("active");
+        $target.addClass("active");
+
     $target.css({
       left: this.width,
       opacity: 1,

@@ -29,19 +29,22 @@ body, .onepage-wrapper, html {
 
 .onepage-pagination {
   position: absolute;
-  right: 20px;
   top: 40%;
+  right: 50px;
   z-index: 5;
   list-style: none;
   margin: 0;
   padding: 0;
 
   margin-top: -100px;
+
+  /*right: 20px;*/
+  display: none;
 }
 
 @media (min-width: 768px) {
       .onepage-pagination {
-          right: 50px;
+          display: block;
       }
   }
 
@@ -50,4 +53,3 @@ body, .onepage-wrapper, html {
   padding: 0;
   text-align: center;
 }
-
