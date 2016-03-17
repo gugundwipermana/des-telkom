@@ -193,7 +193,20 @@ function initialize() {
             $(document).ready(function(e) {
                 $('img[usemap]').rwdImageMaps();
             });
-   
+
+
+
+// close popup if click outside box area
+$('html').click(function() {
+    if ( $('.maparea-isi').hasClass('active') ) {
+        closeAlert();
+    } 
+});
+
+$('.maparea').click(function(event){
+    event.stopPropagation();
+});
+
    /*
 |-----------------------------------------------------------------------------------
 | Superslide
@@ -255,6 +268,9 @@ function initialize() {
 
                     $(".logo.red").removeClass("active");
 
+                    $("#show-search").removeClass("active");
+                    $("#show-lang").removeClass("active");
+
             } else {
                     $(".navbar-costum").addClass("active");
 
@@ -267,6 +283,9 @@ function initialize() {
                      $(".menu-right").addClass("active");
 
                      $(".logo.red").addClass("active");
+
+                     $("#show-search").addClass("active");
+                    $("#show-lang").addClass("active");
             }
   })
 
@@ -287,11 +306,15 @@ function initialize() {
                     $("#show-box-gall").removeClass("active");
 
                     $('.gall-control').addClass("active");
+
+                    $('#slidetext').addClass("turun");
             } else {
                     $("#box-gall-slick").addClass("show");
                     $("#show-box-gall").addClass("active");
 
                     $('.gall-control').removeClass("active");
+
+                    $('#slidetext').removeClass("turun");
             }
 
   });
@@ -339,7 +362,8 @@ function initialize() {
                 slidesToShow: 5,
                 slidesToScroll: 1,
                 autoplay: true,
-                autoplaySpeed: 2000,
+                autoplaySpeed: 5000,
+                speed: 300
         });   
   /*
   
@@ -419,45 +443,45 @@ function initialize() {
                         $('#text-one').css({'opacity': '1'});
                         $('#text-one').css({
                                                                 //'transform': 'translateY(0px)',
-                                                                '-webkit-transform': 'translateY(0px)',
+                                                                /*'-webkit-transform': 'translateY(0px)',
                                                                 '-moz-transform': 'translateY(0px)',
                                                                 '-o-transform': 'translateY(0px)',
-                                                                'transform': 'translateY(0px)',
+                                                                'transform': 'translateY(0px)',*/
                                                           });
-                    }, 2000);
+                    }, 3000);
 
                     window.setTimeout(function() {
                         $('#text-one').css({'opacity': '0'});
                         $('#text-two').css({'opacity': '1'});
                         $('#text-two').css({
                                                                 //'transform': 'translateY(0px)',
-                                                                '-webkit-transform': 'translateY(0px)',
+                                                                /*'-webkit-transform': 'translateY(0px)',
                                                                 '-moz-transform': 'translateY(0px)',
                                                                 '-o-transform': 'translateY(0px)',
-                                                                'transform': 'translateY(0px)',
+                                                                'transform': 'translateY(0px)',*/
                                                           });
 
                          $('#land-logo').css({'opacity': '1'});
                          $('#land-logo').css({
                                                                 //'transform': 'translateY(0px)',
-                                                                '-webkit-transform': 'translateY(0px)',
+                                                                /*'-webkit-transform': 'translateY(0px)',
                                                                 '-moz-transform': 'translateY(0px)',
                                                                 '-o-transform': 'translateY(0px)',
-                                                                'transform': 'translateY(0px)',
+                                                                'transform': 'translateY(0px)',*/
                                                           });
-                    }, 5000);
+                    }, 6000);
 
                      window.setTimeout(function() {
                         $('#text-two').css({'opacity': '0'});
                         $('#text-three').css({'opacity': '1'});
                         $('#text-three').css({
                                                                 //'transform': 'translateY(0px)',
-                                                                '-webkit-transform': 'translateY(0px)',
+                                                               /* '-webkit-transform': 'translateY(0px)',
                                                                 '-moz-transform': 'translateY(0px)',
                                                                 '-o-transform': 'translateY(0px)',
-                                                                'transform': 'translateY(0px)',
+                                                                'transform': 'translateY(0px)',*/
                                                           });
-                    }, 8000);
+                    }, 9000);
 
                     window.setTimeout(function() {
                         $('.logo').css({'opacity': '1'});
@@ -468,16 +492,35 @@ function initialize() {
 
                         $('#land-logo').css({'opacity': '0'});
 
-                    }, 10000);
+                    }, 12000);
+
+
+                    window.setTimeout(function() {
+                        
+                        $('#slides').superslides({
+                          animation: 'fade',
+                            play: 5000,
+                            animation_speed: 1500
+                        });
+                        
+                    }, 14000);
 
                     window.setTimeout(function() {
                         $('#landing-anime').css({'opacity': '0', 'z-index': '1'});
                         
-                         $('#slides').css({'opacity': '1', 'z-index': '2'});
-                        $('#slides').superslides({
-                          animation: 'fade',
-                            play: 4000
-                        });
-                    }, 13000);
+
+                        $('#slides').css({'opacity': '1', 'z-index': '2'});
+                    }, 15000);
 
             });
+
+
+/*$(document).ready(function() {
+
+   $('a.link').on('click touchend', function(e) {
+      var el = $(this);
+      var link = el.attr('href');
+      window.location = link;
+   });
+
+}); */
